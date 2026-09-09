@@ -25,6 +25,7 @@
   --disp:'Bungee',cursive;
   --head:'Anton',sans-serif;
   --body:'Source Sans 3',sans-serif;
+  --font-base:18px;
   --radius:14px;
   --shadow:0 1px 2px rgba(18,20,26,.04), 0 10px 28px -14px rgba(18,20,26,.18);
 }
@@ -34,6 +35,7 @@ body{
   background:var(--bg);
   color:var(--ink);
   font-family:var(--body);
+  font-size:var(--font-base);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
@@ -475,3 +477,53 @@ footer{background:var(--dark);color:#CFD3DA;margin-top:2rem;border-top:4px solid
 .footer__cols{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:1.3rem;font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;color:#9AA1AC}
 .footer__cols a:hover{color:var(--gold)}
 .footer__bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:1.3rem;padding-top:.9rem;font-family:var(--mono);font-size:.66rem;color:#7A818C}
+
+/* ---------- MOBILE: GRÖSSERE SCHRIFT (<=900px) ---------- */
+@media (max-width: 900px){
+  body{font-size:19px;line-height:1.65}
+  .ticker__inner{font-size:.78rem;padding:7px 0}
+  .masthead__top,.masthead__meta{font-size:.7rem}
+  .masthead__logo h1{font-size:clamp(2.3rem,11vw,3.4rem)}
+  .masthead__tagline{font-size:.82rem}
+  .mainnav a{font-size:.86rem;padding:.5rem .95rem}
+  .kicker{font-size:.72rem}
+  h2.art-title{font-size:clamp(1.45rem,5.4vw,2.1rem)}
+  .lead h2.art-title{font-size:clamp(1.6rem,6.4vw,2.4rem)}
+  .deck{font-size:1.05rem}
+  .byline{font-size:.72rem}
+  .text p{font-size:1.06rem}
+  .text .quote{padding:.85rem 1.05rem}
+  .pisa h2{font-size:1.25rem}
+  .pisa p{font-size:1rem}
+  .section-head h2{font-size:1.1rem}
+  .section-head .more{font-size:.76rem}
+  .card h2.art-title{font-size:1.22rem}
+  .rub-hero h1{font-size:clamp(1.9rem,7.5vw,3rem)}
+  .rub-intro{font-size:1rem}
+  .artikull-wrap{padding:0 1rem}
+  .artikull-titull{font-size:clamp(1.9rem,6.2vw,2.6rem)}
+  .artikull-deck{font-size:1.14rem}
+  .artikull-meta{font-size:.74rem}
+  .artikull-body{font-size:1.14rem}
+  .artikull-body .quote{padding:.85rem 1.1rem}
+  .artikull-body .kutia{padding:1.05rem 1.2rem}
+  .share a{font-size:.84rem;padding:.5rem 1rem}
+  .related h2{font-size:1.15rem}
+  .faqja h1{font-size:clamp(1.9rem,6.2vw,2.6rem)}
+  .faqja p,.faqja li{font-size:1.05rem}
+  .btn{font-size:.9rem;padding:.6rem 1.2rem}
+  .cookiebar p{font-size:.95rem}
+  .footer__disclaimer{font-size:.98rem}
+  .footer__cols{font-size:.72rem}
+  .footer__bottom{font-size:.7rem}
+}
+/* ---------- Extra kleine Geräte (<=480px) ---------- */
+@media (max-width: 480px){
+  body{font-size:19.5px}
+  .lead h2.art-title{font-size:1.65rem}
+  h2.art-title{font-size:1.5rem}
+  .card h2.art-title{font-size:1.3rem}
+  .artikull-titull{font-size:2rem}
+  .artikull-body{font-size:1.16rem}
+  .mainnav a{font-size:.88rem;padding:.52rem 1rem}
+}
