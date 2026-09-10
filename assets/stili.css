@@ -9,8 +9,8 @@
   --bg:#FFFFFF;
   --panel:#F4F4F6;
   --ink:#12141A;
-  --ink-2:#4B515B;
-  --ink-3:#8A9097;
+  --ink-2:#2F343D;
+  --ink-3:#6E7480;
   --line:#E7E9EE;
   --line-2:#D6D9E0;
   --magenta:#E1007A;
@@ -90,8 +90,8 @@ img{max-width:100%;display:block}
 }
 .masthead__tagline{
   font-family:var(--head);font-weight:400;
-  font-size:clamp(.72rem,1.9vw,.95rem);letter-spacing:.03em;
-  text-transform:uppercase;color:var(--ink-2);margin-top:.25rem;
+  font-size:clamp(.82rem,2.1vw,1.05rem);letter-spacing:.03em;
+  text-transform:uppercase;color:var(--ink);margin-top:.35rem;
 }
 .masthead__tagline b{color:var(--magenta)}
 .masthead__meta{
@@ -175,25 +175,29 @@ a article:hover{transform:translateY(-2px);box-shadow:0 14px 34px -16px rgba(18,
 }
 .photo__cap{
   position:absolute;left:0;right:0;bottom:0;
-  background:linear-gradient(0deg, rgba(10,12,16,.82), rgba(10,12,16,0));
-  color:#fff;font-family:var(--mono);font-size:.6rem;
-  padding:.6rem .8rem .4rem;letter-spacing:.02em;
+  background:linear-gradient(0deg, rgba(10,12,16,.92), rgba(10,12,16,.05) 80%);
+  color:#fff;font-family:var(--body);font-size:.95rem;font-weight:600;
+  padding:.8rem 1rem .6rem;letter-spacing:.01em;
+  text-shadow:0 1px 2px rgba(0,0,0,.35);
 }
-.photo--gold .photo__cap{background:linear-gradient(0deg, rgba(18,20,26,.75), rgba(18,20,26,0))}
+.photo--gold .photo__cap{background:linear-gradient(0deg, rgba(18,20,26,.88), rgba(18,20,26,0));color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25)}
 
 /* ---------- KICKER / TITEL ---------- */
 .kicker{
   display:inline-block;
-  font-family:var(--body);font-weight:700;
-  font-size:.66rem;text-transform:uppercase;
-  letter-spacing:.09em;
-  margin-bottom:.4rem;
+  font-family:var(--body);font-weight:800;
+  font-size:.82rem;text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:.5rem;
+  padding:.18rem .55rem;border-radius:6px;
+  background:rgba(225,0,122,.10);
 }
-.kicker--blue{color:var(--blue)}
-.kicker--red{color:var(--magenta)}
-.kicker--gold{color:#B97A10}
-.kicker--black{color:var(--ink)}
-.kicker--green{color:var(--green)}
+.kicker--blue{color:var(--blue);background:rgba(31,78,156,.10)}
+.kicker--red{color:var(--magenta);background:rgba(225,0,122,.12)}
+.kicker--gold{color:#B97A10;background:rgba(232,163,61,.18)}
+.kicker--black{color:var(--ink);background:rgba(18,20,26,.08)}
+.kicker--green{color:var(--green);background:rgba(14,138,78,.10)}
+
 h2.art-title{
   font-family:var(--head);font-weight:400;text-transform:uppercase;
   line-height:1.07;letter-spacing:.01em;
@@ -201,12 +205,17 @@ h2.art-title{
   margin-bottom:.4rem;
 }
 .lead h2.art-title{font-size:clamp(1.45rem,5.6vw,2.5rem)}
-.deck{font-size:1rem;font-weight:600;color:var(--ink-2);margin-bottom:.6rem}
+.deck{font-size:1.08rem;font-weight:600;color:var(--ink);margin-bottom:.6rem;line-height:1.45}
 .byline{
-  font-family:var(--mono);font-size:.66rem;text-transform:uppercase;
-  letter-spacing:.05em;color:var(--ink-3);
+  font-family:var(--body);font-size:.92rem;font-weight:600;
+  letter-spacing:.01em;color:var(--ink-2);
 }
-.byline b{color:var(--blue)}
+.byline b{color:var(--blue);font-weight:800}
+.byline::before{
+  content:"";display:inline-block;width:6px;height:6px;
+  background:var(--magenta);border-radius:50%;
+  margin-right:8px;vertical-align:middle;
+}
 
 /* ---------- TEXT ---------- */
 .text p{margin-bottom:.8rem;font-size:1.05rem}
@@ -270,10 +279,11 @@ h2.art-title{
 }
 .section-head .rule{flex:1;border-top:1px dashed var(--line-2)}
 .section-head .more{
-  font-family:var(--body);font-weight:700;font-size:.7rem;
-  text-transform:uppercase;letter-spacing:.05em;color:var(--blue);
+  font-family:var(--body);font-weight:700;font-size:.95rem;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--blue);
   white-space:nowrap;
 }
+.section-head .more::after{content:" ›";font-weight:400;margin-left:2px}
 .section-head .more:hover{color:var(--magenta)}
 
 /* ---------- GRIDS ---------- */
@@ -336,8 +346,8 @@ a.artikel-rresht:hover{transform:translateY(-2px);box-shadow:0 14px 34px -16px r
 /* ---------- ARTIKEL-SEITE ---------- */
 .artikull-wrap{max-width:760px;margin:1.3rem auto;padding:0 1rem}
 .breadcrumb{
-  font-family:var(--mono);font-size:.66rem;text-transform:uppercase;
-  letter-spacing:.05em;color:var(--ink-3);margin-bottom:.8rem;
+  font-family:var(--body);font-size:.88rem;font-weight:600;
+  letter-spacing:.02em;color:var(--ink-2);margin-bottom:.8rem;
 }
 .breadcrumb a:hover{color:var(--magenta)}
 .artikull-titull{
@@ -347,14 +357,15 @@ a.artikel-rresht:hover{transform:translateY(-2px);box-shadow:0 14px 34px -16px r
 }
 .artikull-deck{font-size:1.12rem;font-weight:600;color:var(--ink-2);margin-bottom:.85rem}
 .artikull-meta{
-  display:flex;flex-wrap:wrap;gap:.45rem 1.2rem;align-items:center;
-  font-family:var(--mono);font-size:.7rem;text-transform:uppercase;
-  letter-spacing:.04em;color:var(--ink-3);
+  display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:center;
+  font-family:var(--body);font-size:.92rem;font-weight:600;
+  letter-spacing:.01em;color:var(--ink-2);
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  padding:.55rem 0;margin-bottom:1.1rem;
+  padding:.7rem 0;margin-bottom:1.1rem;
 }
-.artikull-meta .aut{color:var(--blue);font-weight:700}
-.artikull-meta .lexim{color:var(--magenta);font-weight:700}
+.artikull-meta .aut{color:var(--blue);font-weight:800}
+.artikull-meta span, .artikull-meta a{display:inline-flex;align-items:center;gap:.4rem}
+
 .artikull-hero{
   background:var(--bg);
   border:1px solid var(--line);
@@ -474,30 +485,32 @@ footer{background:var(--dark);color:#CFD3DA;margin-top:2rem;border-top:4px solid
 
 /* ---------- MOBILE: GRÖSSERE SCHRIFT (<=900px) ---------- */
 @media (max-width: 900px){
-  body{font-size:19px;line-height:1.65}
+  body{font-size:19.5px;line-height:1.7}
   .ticker__inner{font-size:.78rem;padding:7px 0}
   .masthead__top,.masthead__meta{font-size:.7rem}
   .masthead__logo h1{font-size:clamp(2.3rem,11vw,3.4rem)}
   .masthead__tagline{font-size:.82rem}
   .mainnav a{font-size:.86rem;padding:.5rem .95rem}
-  .kicker{font-size:.72rem}
+  .kicker{font-size:.92rem;padding:.22rem .6rem}
   h2.art-title{font-size:clamp(1.45rem,5.4vw,2.1rem)}
   .lead h2.art-title{font-size:clamp(1.6rem,6.4vw,2.4rem)}
-  .deck{font-size:1.05rem}
-  .byline{font-size:.72rem}
+  .deck{font-size:1.12rem}
+  .byline{font-size:1rem}
+  .photo__cap{font-size:1.02rem;padding:.9rem 1.1rem .7rem}
   .text p{font-size:1.06rem}
   .text .quote{padding:.85rem 1.05rem}
   .pisa h2{font-size:1.25rem}
   .pisa p{font-size:1rem}
-  .section-head h2{font-size:1.1rem}
-  .section-head .more{font-size:.76rem}
+  .section-head h2{font-size:1.15rem}
+  .section-head .more{font-size:.95rem}
   .card h2.art-title{font-size:1.22rem}
   .rub-hero h1{font-size:clamp(1.9rem,7.5vw,3rem)}
   .rub-intro{font-size:1rem}
   .artikull-wrap{padding:0 1rem}
   .artikull-titull{font-size:clamp(1.9rem,6.2vw,2.6rem)}
   .artikull-deck{font-size:1.14rem}
-  .artikull-meta{font-size:.74rem}
+  .artikull-meta{font-size:1rem}
+  .breadcrumb{font-size:.95rem}
   .artikull-body{font-size:1.14rem}
   .artikull-body .quote{padding:.85rem 1.1rem}
   .artikull-body .kutia{padding:1.05rem 1.2rem}
