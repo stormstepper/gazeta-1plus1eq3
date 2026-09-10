@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../assets/stili.css">
 </head>
 <body>
-<div class="ticker" role="marquee" aria-label="Lajmet e fundit"><div class="ticker__inner"><span><b>BREAKING:</b> Tekstet e vjetra shkollore shiten online — tekstet e reja ende në rrugë (rruga duket e gjatë)</span><span><b>LIVE:</b> "Prishtina Parking" premton funksionalizim të plotë në shtator — për të katërtin shtator radhazi</span><span><b>BREAKING:</b> Dënimi për "53-milionëshin" ulet në rigjykim — nga 10 vjet në 3 vjet e 8 muaj, si në sezon zbritjesh</span><span><b>LIVE:</b> EFTA-Kosova hyn në fuqi më 1 tetor — katër shtete alpine, një valë entuziazmi kombëtar</span><span><b>BREAKING:</b> Hardh Fest 2026 mbledh 60.000 vizitorë — Rahoveci bëhet qytet për tri ditë, fshat për 362 të tjera</span><span><b>LIVE:</b> Superkupa e Kosovës miratohet "me kusht" — kushti kryesor: të luhet vetë ndeshja</span><span><b>BREAKING:</b> KEK shet 3 milionë ton qymyr jashtë — rryma vazhdon të vijë nga jashtë, në drejtim të kundërt</span><span><b>LIVE:</b> Malisheva lider në Superligë, Uka: "pse jo edhe kampion", redaksia jonë shton "pse jo edhe 1+1=5"</span><span><b>BREAKING:</b> Tekstet e vjetra shkollore shiten online — tekstet e reja ende në rrugë (rruga duket e gjatë)</span><span><b>LIVE:</b> "Prishtina Parking" premton funksionalizim të plotë në shtator — për të katërtin shtator radhazi</span><span><b>BREAKING:</b> Dënimi për "53-milionëshin" ulet në rigjykim — nga 10 vjet në 3 vjet e 8 muaj, si në sezon zbritjesh</span><span><b>LIVE:</b> EFTA-Kosova hyn në fuqi më 1 tetor — katër shtete alpine, një valë entuziazmi kombëtar</span><span><b>BREAKING:</b> Hardh Fest 2026 mbledh 60.000 vizitorë — Rahoveci bëhet qytet për tri ditë, fshat për 362 të tjera</span><span><b>LIVE:</b> Superkupa e Kosovës miratohet "me kusht" — kushti kryesor: të luhet vetë ndeshja</span><span><b>BREAKING:</b> KEK shet 3 milionë ton qymyr jashtë — rryma vazhdon të vijë nga jashtë, në drejtim të kundërt</span><span><b>LIVE:</b> Malisheva lider në Superligë, Uka: "pse jo edhe kampion", redaksia jonë shton "pse jo edhe 1+1=5"</span></div></div>
+<div class="ticker" role="marquee" aria-label="Lajmet e fundit"><div class="ticker__inner"><span><b>BREAKING:</b> Qeveria më në fund formohet — dikush e pa, askush s'e beson</span><span><b>BREAKING:</b> Inflacioni u ul 0.1%, çmimet u rritën 10%</span><span><b>LIVE:</b> Deputeti gjen imunitetin e tij pas 3 ditë kërkimi</span><span><b>BREAKING:</b> PISA: Kosova e para në botë në 1+1=3</span><span><b>LIVE:</b> Turisti i parë gjen parking në Tiranë — hetim në vazhdim</span><span><b>BREAKING:</b> Buxheti i ri: 0 euro, por me shumë synime</span><span><b>BREAKING:</b> Qeveria më në fund formohet — dikush e pa, askush s'e beson</span><span><b>BREAKING:</b> Inflacioni u ul 0.1%, çmimet u rritën 10%</span><span><b>LIVE:</b> Deputeti gjen imunitetin e tij pas 3 ditë kërkimi</span><span><b>BREAKING:</b> PISA: Kosova e para në botë në 1+1=3</span><span><b>LIVE:</b> Turisti i parë gjen parking në Tiranë — hetim në vazhdim</span><span><b>BREAKING:</b> Buxheti i ri: 0 euro, por me shumë synime</span></div></div>
 <header class="masthead">
   <div class="masthead__top"><span>Edicioni i mërkurë, 9 shtator 2026</span><span>Kosova • Shqipëria • Bota (sipas nesh)</span></div>
   <div class="masthead__logo"><a href="../index.html" aria-label="Kryefaqja"><h1><span class="n1">1</span><span class="plus">+</span><span class="n2">1</span><span class="eq">=</span><span class="n3">3</span></h1></a><p class="masthead__tagline">Gazeta Satirike e Kosovës dhe Shqipërisë — <b>lajme që nuk duhet t'i besoni, por i lexoni gjithsesi</b></p></div>
@@ -98,10 +98,19 @@
   <button class="btn" id="cookie-ok">Në rregull, vazhdo</button>
 </div>
 <script>
-  var cb=document.getElementById('cookiebar');
-  setTimeout(function(){cb&&cb.classList.add('show')},1200);
-  var ok=document.getElementById('cookie-ok');
-  if(ok){ok.onclick=function(){cb.classList.remove('show')}}
+  (function(){
+    var cb=document.getElementById('cookiebar');
+    var ok=document.getElementById('cookie-ok');
+    if(!cb){return}
+    try{
+      if(localStorage.getItem('gp11eq3_cookie')){return}
+    }catch(e){}
+    setTimeout(function(){cb.classList.add('show')},800);
+    if(ok){ok.onclick=function(){
+      try{localStorage.setItem('gp11eq3_cookie','1')}catch(e){}
+      cb.classList.remove('show')
+    }}
+  })();
 </script>
 </body>
 </html>

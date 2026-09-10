@@ -1,0 +1,7 @@
+# Cloudflare Pages: HTML immer frisch prüfen lassen (kein Stale-Cache beim Browser)
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/*
+  Cache-Control: public, max-age=300, must-revalidate
+/artikuj/imazhe/*
+  Cache-Control: public, max-age=604800, immutable
