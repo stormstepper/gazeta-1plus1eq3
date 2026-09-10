@@ -5,3 +5,6 @@
   Cache-Control: public, max-age=300, must-revalidate
 /artikuj/imazhe/*
   Cache-Control: public, max-age=604800, immutable
+
+/weekly-recap/*
+  Cache-Control: public, max-age=600, must-revalidate
