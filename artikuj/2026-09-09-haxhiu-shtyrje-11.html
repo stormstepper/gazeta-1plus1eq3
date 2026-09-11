@@ -158,8 +158,8 @@
       // Kurzform des Zitats fuer den Share-Post
       var qShort=quote;
       if(qShort.length>240){ qShort=qShort.slice(0,235).replace(/[,;:\-]?\s+\S*$/,'')+'\u2026'; }
-      var body=(qShort?('\u201C'+qShort+'\u201D\n\n'):'')+
-               '\uD83D\uDCF0 '+tit+'\n\n'+
+      var body='\uD83D\uDCF0 '+tit+'\n\n'+
+               (qShort?('\u201C'+qShort+'\u201D\n\n'):'')+
                url+'\n#Lajmrova #Satire #Kosova #Shqiperia';
       var ta=document.getElementById('sp-text'); ta.value=body;
       function kopjo(e){ var b=e.currentTarget; navigator.clipboard.writeText(ta.value).then(function(){b.textContent='Kopjuar'; b.classList.add('sharepanel__ok'); setTimeout(function(){b.textContent=b.getAttribute('data-lbl')||'Kopjo tekstin'; b.classList.remove('sharepanel__ok')},1600)}) }
